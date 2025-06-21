@@ -6,24 +6,11 @@
         <artifactId>javelin</artifactId>
         <version>1.0.0</version>
     </parent>
-    <groupId>com.paohaijiao.javelin</groupId>
-    <artifactId>jquick</artifactId>
+    <groupId>com.github.paohaijiao</groupId>
+    <artifactId>jquick-parent</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>jquick</name>
-    <modules>
-        <module>jquick-base</module>
-        <module>jquick-curl</module>
-        <module>jquick-excel</module>
-        <module>jquick-json</module>
-        <module>jquick-lang</module>
-        <module>jquick-path</module>
-        <module>jquick-pdf</module>
-        <module>jquick-sql</module>
-        <module>jquick-xml</module>
-
-
-    </modules>
     <properties>
         <jquick.version>1.0.0</jquick.version>
         <hutool.version>5.4.2</hutool.version>
@@ -154,7 +141,7 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.12.0</version> <!-- 最新稳定版 -->
+                <version>3.12.0</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
