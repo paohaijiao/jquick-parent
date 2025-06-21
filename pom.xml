@@ -48,42 +48,47 @@
                 <version>${jquick.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>jquick-curl</artifactId>
                 <version>${jquick.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>jquick-excel</artifactId>
                 <version>${jquick.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>jquick-json</artifactId>
                 <version>${jquick.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>jquick-lang</artifactId>
                 <version>${jquick.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>jquick-path</artifactId>
                 <version>${jquick.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>com.github.paohaijiao</groupId>
+                <artifactId>jquick-json</artifactId>
+                <version>${jquick.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>jquick-pdf</artifactId>
                 <version>${jquick.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>jquick-sql</artifactId>
                 <version>${jquick.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>jquick-xml</artifactId>
                 <version>${jquick.version}</version>
             </dependency>
