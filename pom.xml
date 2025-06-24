@@ -2,11 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.paohaijiao.javelin</groupId>
+        <groupId>com.github.paohaijiao</groupId>
         <artifactId>javelin</artifactId>
         <version>1.0.0</version>
     </parent>
-    <groupId>com.github.paohaijiao</groupId>
     <artifactId>jquick-parent</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
@@ -38,12 +37,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
-                <artifactId>jquick-base</artifactId>
-                <version>${jquick.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>javelin-core</artifactId>
                 <version>${jquick.version}</version>
             </dependency>
@@ -93,37 +87,37 @@
                 <version>${jquick.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>javelin-scan</artifactId>
                 <version>${javelin.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.paohaijiao.jstark</groupId>
+                <groupId>com.github.paohaijiao</groupId>
                 <artifactId>javelin-core</artifactId>
                 <version>${javelin.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
-                <artifactId>jstark-provider</artifactId>
+                <groupId>com.github.paohaijiao</groupId>
+                <artifactId>javelin-provider</artifactId>
+                <version>${javelin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.paohaijiao</groupId>
+                <artifactId>javelin-scan</artifactId>
                 <version>${javelin.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.paohaijiao.javelin</groupId>
-                <artifactId>jstark-scan</artifactId>
+                <artifactId>javelin-event</artifactId>
                 <version>${javelin.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
-                <artifactId>jstark-event</artifactId>
-                <version>${javelin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>om.paohaijiao.javelin</groupId>
                 <artifactId>javelin-mybatis</artifactId>
                 <version>${javelin.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.paohaijiao.javelin</groupId>
+                <groupId>om.paohaijiao.javelin</groupId>
                 <artifactId>javelin-resource</artifactId>
                 <version>${javelin.version}</version>
             </dependency>
