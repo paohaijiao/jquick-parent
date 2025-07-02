@@ -6,19 +6,18 @@
         <artifactId>javelin</artifactId>
         <version>1.0.0</version>
     </parent>
+    <groupId>io.github.paohaijiao</groupId>
     <artifactId>jquick-parent</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <packaging>pom</packaging>
     <name>jquick</name>
     <properties>
-        <jquick.version>1.0.0</jquick.version>
         <hutool.version>5.4.2</hutool.version>
         <guava.version>31.1-jre</guava.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <antlr.version>4.13.2</antlr.version>
         <com.fasterxml.version>2.15.2</com.fasterxml.version>
         <groovy.version>3.0.8</groovy.version>
-        <jstark.version>0.0.1-SNAPSHOT</jstark.version>
         <lombok.version>1.18.30</lombok.version>
         <okhttp.version>4.10.0</okhttp.version>
         <cglib.version>3.3.0</cglib.version>
@@ -34,56 +33,32 @@
         <slf4j-api.version>2.0.9</slf4j-api.version>
         <jfree.svg.version>5.0.3</jfree.svg.version>
     </properties>
+    <description>jquick parent is a  framework to reslove the jquick dependency version for common use</description>
+    <url>https://github.com/paohaijiao</url>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Martin</name>
+            <email>goudingcheng@outlook.com</email>
+            <organization>Sonatype</organization>
+            <organizationUrl>http://www.sonatype.com</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/paohaijiao/jquick-parent</connection>
+        <developerConnection>scm:git:ssh://github.com/paohaijiao/jquick-parent.git</developerConnection>
+        <url>https://github.com/paohaijiao/jquick-parent</url>
+    </scm>
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.github.paohaijiao</groupId>
                 <artifactId>javelin-core</artifactId>
-                <version>${jquick.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.paohaijiao</groupId>
-                <artifactId>jquick-curl</artifactId>
-                <version>${jquick.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.paohaijiao</groupId>
-                <artifactId>jquick-excel</artifactId>
-                <version>${jquick.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.paohaijiao</groupId>
-                <artifactId>jquick-json</artifactId>
-                <version>${jquick.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.paohaijiao</groupId>
-                <artifactId>jquick-lang</artifactId>
-                <version>${jquick.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.paohaijiao</groupId>
-                <artifactId>jquick-path</artifactId>
-                <version>${jquick.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.paohaijiao</groupId>
-                <artifactId>jquick-json</artifactId>
-                <version>${jquick.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.paohaijiao</groupId>
-                <artifactId>jquick-pdf</artifactId>
-                <version>${jquick.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.paohaijiao</groupId>
-                <artifactId>jquick-sql</artifactId>
-                <version>${jquick.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.paohaijiao</groupId>
-                <artifactId>jquick-xml</artifactId>
                 <version>${jquick.version}</version>
             </dependency>
             <dependency>
@@ -166,7 +141,7 @@
             <dependency>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4-runtime</artifactId>
-                <version>${antlr.version}</version> <!-- 使用最新版本 -->
+                <version>${antlr.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.antlr</groupId>
@@ -198,13 +173,13 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version> <!-- 2023年12月最新版本 -->
+                <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>${commons-lang3.version}</version> <!-- 2023年12月最新版本 -->
+                <version>${commons-lang3.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.squareup.okhttp3</groupId>
@@ -335,4 +310,38 @@
         </dependencies>
 
     </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.8.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>ossrh</publishingServerId>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.8.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>ossrh</publishingServerId>
+                    <autoPublish>true</autoPublish>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.8.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>ossrh</publishingServerId>
+                    <autoPublish>true</autoPublish>
+                    <waitUntil>published</waitUntil>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
