@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.github.paohaijiao</groupId>
-        <artifactId>javelin</artifactId>
-        <version>1.0.0</version>
-    </parent>
+<!--    <parent>-->
+<!--        <groupId>com.github.paohaijiao</groupId>-->
+<!--        <artifactId>javelin</artifactId>-->
+<!--        <version>1.0.0</version>-->
+<!--    </parent>-->
     <groupId>io.github.paohaijiao</groupId>
     <artifactId>jquick-parent</artifactId>
     <version>0.0.1</version>
@@ -50,9 +50,7 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:git:https://github.com/paohaijiao/jquick-parent</connection>
-        <developerConnection>scm:git:ssh://github.com/paohaijiao/jquick-parent.git</developerConnection>
-        <url>https://github.com/paohaijiao/jquick-parent</url>
+       <url>https://github.com/paohaijiao/jquick-parent</url>
     </scm>
     <dependencyManagement>
         <dependencies>
@@ -313,24 +311,21 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.sonatype.central</groupId>
-                <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.8.0</version>
-                <extensions>true</extensions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
                 <configuration>
-                    <publishingServerId>ossrh</publishingServerId>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
-            <plugin>
-                <groupId>org.sonatype.central</groupId>
-                <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.8.0</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <publishingServerId>ossrh</publishingServerId>
-                    <autoPublish>true</autoPublish>
-                </configuration>
-            </plugin>
+
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
